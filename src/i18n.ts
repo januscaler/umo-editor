@@ -20,8 +20,8 @@ const getLocale = (lang: SupportedLocale) => {
 
 export const i18n = createI18n({
   legacy: false,
-  locale: options.value.locale || 'zh-CN',
-  defaultLocale: 'zh-CN',
+  locale: options.value.locale || 'en-US',
+  defaultLocale: 'en-US',
   messages: {
     'en-US': merge(en_US, getLocale('en-US')),
     'zh-CN': merge(zh_CN, getLocale('zh-CN')),
