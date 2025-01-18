@@ -57,7 +57,6 @@ import {
 import domToImage from 'dom-to-image-more'
 import type { GlobalConfigProvider } from 'tdesign-vue-next'
 import enConfig from 'tdesign-vue-next/esm/locale/en_US'
-import cnConfig from 'tdesign-vue-next/esm/locale/zh_CN'
 
 import { getSelectionNode, getSelectionText } from '@/extensions/selection'
 import { i18n } from '@/i18n'
@@ -70,7 +69,6 @@ import type {
 } from '@/types'
 import { consoleCopyright } from '@/utils/copyright'
 
-import ruConfig from '../locales/td-next-vue/ru-RU'
 
 const { toBlob, toJpeg, toPng } = domToImage
 
@@ -316,9 +314,7 @@ watch(
 
 // Global Locale Config
 const localeConfig = $ref<Record<string, GlobalConfigProvider>>({
-  'zh-CN': cnConfig as unknown as GlobalConfigProvider,
-  'en-US': enConfig as unknown as GlobalConfigProvider,
-  'ru-RU': ruConfig as unknown as GlobalConfigProvider,
+  'en-US': enConfig as unknown as GlobalConfigProvider
 })
 
 // Theme Setup
