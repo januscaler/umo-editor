@@ -31,9 +31,9 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      # # Step 5: Build the package
-      # - name: Build the Package
-      #   run: npm run pr-build
+      # Step 5: Build the package
+      - name: Build the Package
+        run: npm run pr-build
 
       # Step 6: Publish the package to npm
       - name: Publish Package
