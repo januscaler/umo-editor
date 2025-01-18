@@ -1,6 +1,6 @@
 {
   "name": "@januscaler/umoeditor",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "description": "Umo Editor is open-source document editor based on Vue3 and Tiptap. Umo Editor provides comprehensive document editing capabilities and AI creation features, supports pagination, supports Markdown syntax, offers basic rich text editing functions, allows for the insertion of various node types in multiple formats, provides a variety of practical tools, and supports setting page styles. It also supports exporting in various formats, printing and print preview, block-level document editing, adding custom extensions, multi-language settings, and a dark theme.",
   "keywords": [
@@ -36,7 +36,7 @@
   },
   "types": "./types/index.d.ts",
   "scripts": {
-    "pr-build":"vite build",
+    "pr-build": "vite build",
     "build": "vue-tsc --noEmit && vite build",
     "dev": "vite --port 9000 --open --force",
     "format": "prettier --write .",
@@ -54,6 +54,7 @@
   "dependencies": {
     "@eslint/object-schema": "^2.1.4",
     "@imgly/background-removal": "1.5.5",
+    "@januscaler/umoeditor": "file:januscaler-umoeditor-1.0.1.tgz",
     "@tiptap/core": "^2.6.6",
     "@tiptap/extension-bold": "^2.6.6",
     "@tiptap/extension-bubble-menu": "^2.6.6",
