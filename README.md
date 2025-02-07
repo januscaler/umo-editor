@@ -3,12 +3,15 @@
 </p>
 
 <p style={{ textAlign: 'center' }}>
-<a href="https://github.com/umodoc/editor/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/npm/l/@umoteam/editor" /></a>
-<a href="https://www.npmjs.com/package/@umoteam/editor" target="_blank"><img src="https://img.shields.io/npm/v/@umoteam/editor" /></a>
-<a href="https://www.npmjs.com/package/@umoteam/editor" target="_blank"><img src="https://img.shields.io/npm/d18m/@umoteam/editor" /></a>
-<a href="https://www.npmjs.com/package/@umoteam/editor" target="_blank"><img src="https://img.shields.io/npm/unpacked-size/%40umoteam%2Feditor" /></a>
+<a href="https://github.com/umodoc/editor/blob/main/LICENSE" target="_blank"><img src="https://img.shields.io/npm/l/@januscaler/umoeditor" /></a>
+<a href="https://www.npmjs.com/package/@januscaler/umoeditor" target="_blank"><img src="https://img.shields.io/npm/v/@januscaler/umoeditor" /></a>
+<a href="https://www.npmjs.com/package/@januscaler/umoeditor" target="_blank"><img src="https://img.shields.io/npm/d18m/@januscaler/umoeditor" /></a>
+<a href="https://www.npmjs.com/package/@januscaler/umoeditor" target="_blank"><img src="https://img.shields.io/npm/unpacked-size/%40umoteam%2Feditor" /></a>
 <a href="https://github.com/umodoc/editor/commits" target="_blank"><img src="https://img.shields.io/github/commit-activity/m/umodoc/editor" /></a>
 </p>
+
+> Please Note  
+> This is a forked version of the official UMO editor. We initially tried using the official version for our apps but faced issues with setting English as the default language. To resolve this, we explicitly set the default language to English.
 
 # Introduction
 
@@ -18,7 +21,7 @@ Umo Editor is open-source document editor based on Vue3 and Tiptap. Umo Editor p
 
 As a standalone Vue3 plugin, Umo Editor can be easily integrated into any Vue3 project with zero configuration. For non-Vue3 projects, you can embed Umo Editor using an Iframe.
 
-[Documentation](https://editor.umodoc.com/en/docs) | [中文文档](https://editor.umodoc.com/cn/docs) | [Live Demo](https://demo.umodoc.com/editor?lang=en-US) | [GitHub](https://github.com/umodoc/editor) | [NPM](https://www.npmjs.com/package/@umoteam/editor)
+[Documentation](https://editor.umodoc.com/en/docs) | [中文文档](https://editor.umodoc.com/cn/docs) | [Live Demo](https://demo.umodoc.com/editor?lang=en-US) | [GitHub](https://github.com/umodoc/editor) | [NPM](https://www.npmjs.com/package/@januscaler/umoeditor)
 
 ## Online Experience
 
