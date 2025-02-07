@@ -139,12 +139,12 @@
     "image": "Image",
     "link": {
       "text": "Link",
-      "title": "Insert Link",
       "insert": "Insert",
+      "remove": "Remove",
       "hrefText": "Link Text:",
       "hrefTextTip": "Enter or select link text",
       "href": "Link URL:",
-      "hrefTip": "Enter the link URL, usually starting with http:// or https://"
+      "hrefTip": "Usually starting with http:// or https://"
     },
     "math": "Mathematics",
     "bookmark": {
@@ -498,9 +498,6 @@
       "title": "Error Message",
       "message": "An error occurred with the AI Document Assistant result. Please try again!"
     }
-  },
-  "comment": {
-    "text": "Comment"
   },
   "pageOptions": {
     "title": "Page Settings",

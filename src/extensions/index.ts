@@ -119,6 +119,9 @@ export const extensions = [
   hr,
   Iframe,
   Mathematics,
+  Bookmark.configure({
+    class: 'umo-editor-bookmark',
+  }),
 
   // 表格
   Table.configure({
@@ -167,9 +170,6 @@ export const extensions = [
   }),
   Dropcursor.configure({
     color: 'var(--umo-primary-color)',
-  }),
-  Bookmark.configure({
-    class: 'umo-editor-bookmark',
   }),
 ]
 
