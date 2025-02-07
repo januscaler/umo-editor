@@ -260,7 +260,7 @@ const defaultOptions: UmoEditorOptions = {
     },
     defaultOrientation: 'portrait',
     defaultBackground: '#fff',
-    showBreakMarks: true,
+    showBreakMarks: false,
     watermark: {
       type: 'compact',
       alpha: 0.2,

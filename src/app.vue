@@ -1,13 +1,12 @@
 <template>
   <div class="box">
-    <umo-editor ref="editorRef" v-bind="options" />
+    <umo-editor   ref="editorRef" v-bind="options" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { shortId } from '@/utils/short-id'
 
-// import { UmoEditor } from '../dist/umo-editor'
 
 const editorRef = ref(null)
 const templates = [
@@ -29,6 +28,9 @@ const options = ref({
     // defaultMode: 'classic',
     // menus: ['base'],
     enableSourceEditor: true,
+  },
+  page:{
+    showBreakMarks: false,
   },
   document: {
     // title: '测试文档',

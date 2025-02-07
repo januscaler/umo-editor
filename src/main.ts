@@ -1,6 +1,11 @@
+import type { UmoEditorOptions } from '@/types'
+
 import App from './app.vue'
-import {useUmoEditor} from 'dist/umo-editor'
+import { useUmoEditor } from './components'
 const app = createApp(App)
-app.use(useUmoEditor,{})
+
+const options = {}
+
+app.use(useUmoEditor, options as unknown as UmoEditorOptions)
 
 app.mount('#app')
