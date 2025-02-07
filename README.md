@@ -79,6 +79,116 @@ For more detailed introductions, see [Core Features](./docs/features).
 
 Node.js 18.0.0 or above.
 
+## Quick Start for Setting Up UMO Editor in a Nuxt Project  
+
+To integrate **UMO Editor** into your Nuxt project, follow these steps:
+
+#### Step 1: Configure the Plugin  
+
+Create a file named `umoeditor.client.ts` in the `plugins` directory and add the following code:  
+
+```ts
+import { useUmoEditor, UmoEditorOptions } from '@januscaler/umoeditor'
+
+export default defineNuxtPlugin((app) => {
+    const options = {}
+    app.vueApp.use(useUmoEditor, options as unknown as UmoEditorOptions);
+});
+```
+
+#### Step 2: Use the Editor in a Component  
+
+Now, create a component named `msWord.vue` and insert the following code:  
+
+```vue
+<template>
+  <div class="box">
+    <umo-editor @created="onEditorCreated" ref="editorRef" v-bind="options" />
+  </div>
+</template>
+
+<script setup lang="ts">
+const options = ref({})
+const editorRef = ref()
+
+function onEditorCreated(editor: any) {
+  options.value = {
+    toolbar: {
+      enableSourceEditor: true,
+    },
+    page: {
+      showBreakMarks: false
+    },
+    document: {
+      content: localStorage.getItem('document.content') ?? '<p>测试文档</p>',
+    },
+    cdnUrl: 'https://cdn.umodoc.com',
+    shareUrl: 'https://umodoc.com',
+    file: {
+      allowedMimeTypes: [
+        'application/pdf',
+        'image/svg+xml',
+        'video/mp4',
+        'audio/*',
+      ],
+    },
+    assistant: {
+      enabled: true,
+    },
+    user: {
+      userId: 'umoeditor',
+      nickName: 'Umo Editor',
+      avatarUrl: 'https://tdesign.gtimg.com/site/avatar.jpg',
+    },
+    async onSave(content: string, page: number, document: { content: string }) {
+      localStorage.setItem('document.content', document.content)
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (true) {
+            console.log('onSave', { content, page, document })
+            resolve('Save successful')
+          } else {
+            reject(new Error('Save failed'))
+          }
+        }, 2000)
+      })
+    },
+    async onFileUpload(file: File & { url?: string }) {
+      if (!file) throw new Error('No file found for upload')
+
+      console.log('Uploading file:', file)
+      await new Promise((resolve) => setTimeout(resolve, 3000))
+
+      return {
+        id: 7,
+        url: file.url ?? URL.createObjectURL(file),
+        name: file.name,
+        type: file.type,
+        size: file.size,
+      }
+    },
+    async onAssistant() {
+      return await Promise.resolve('<p>AI Assistant Test</p>')
+    },
+    async onCustomImportWordMethod() {
+      return await Promise.resolve({ value: '<p>Test Word Import</p>' })
+    },
+  }
+}
+</script>
+
+<style>
+.box {
+  margin: 20px;
+  height: calc(100vh - 40px);
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  position: relative;
+}
+</style>
+```
+
+
 ## Join the Community
 
 We encourage users to join the Umo Editor open-source community and participate in the development and improvement of the product. Whether submitting bug reports, feature requests, or code contributions, all are valuable parts of our community.
