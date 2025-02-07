@@ -176,7 +176,7 @@ export interface AssistantResult {
 export interface FileOptions {
   allowedMimeTypes: string[]
   maxSize: number
-  preview: {
+  preview?: {
     extensions?: string[]
     url: string
   }[]

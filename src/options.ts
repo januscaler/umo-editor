@@ -343,6 +343,7 @@ const defaultOptions: UmoEditorOptions = {
     params: {},
   },
   file: {
+    preview:[{url:'',extensions:[]}],
     allowedMimeTypes: [],
     maxSize: 1024 * 1024 * 100, // 100M
   },

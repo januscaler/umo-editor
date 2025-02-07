@@ -37,7 +37,7 @@
 </template>
 
 <script setup lang="ts">
-const { options, editor, commentBox } = useStore()
+const { options, editor } = useStore()
 
 const props = defineProps({
   user: {
@@ -52,7 +52,6 @@ const submitComment = () => {
   closeComment()
 }
 const closeComment = () => {
-  commentBox.value = false
   editor.value?.commands.focus()
 }
 </script>

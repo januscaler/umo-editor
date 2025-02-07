@@ -7,9 +7,8 @@
 </template>
 
 <script setup lang="ts">
-const { editor, commentBox } = useStore()
+const { editor } = useStore()
 const openCommentBox = () => {
-  commentBox.value = true
   editor.value?.commands.focus()
 }
 </script>
